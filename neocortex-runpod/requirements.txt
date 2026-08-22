@@ -1,0 +1,32 @@
+# NEOCORTEX GPU SERVER - REQUIREMENTS
+
+# Core framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+slowapi==0.1.9
+
+# Scientific computing
+numpy==1.24.3
+torch==2.1.0
+
+# Molecular chemistry (drug discovery and structure generation)
+rdkit-pypi>=2022.9.5
+
+# AutoDock Vina must be installed separately via conda:
+#   conda install -c conda-forge autodock-vina openbabel
+
+# Optional, for ChemGPT molecular generation (AI mode):
+# transformers>=4.30.0
+# sentencepiece>=0.1.99
+
+# Process management (container only, not needed locally)
+supervisor>=4.2.5
+
+# HTTP client (for Java backend communication)
+requests>=2.31.0
+
+# Optional extras:
+# pymol-open-source>=2.5.0   # docking visualization
+# deepchem>=2.7.0            # ADMET prediction, toxicity
+# bitsandbytes>=0.41.0       # 8-bit quantization

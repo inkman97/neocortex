@@ -1,0 +1,24 @@
+# Local development dependencies.
+#
+# requirements.txt is pinned to match the CUDA base image in the Dockerfile and
+# only resolves on Python 3.8-3.11. Use this file instead when running locally
+# on Python 3.12, 3.13 or 3.14:
+#
+#   pip install -r requirements-local.txt
+#
+# Differences from requirements.txt:
+#   - numpy and torch unpinned (1.24.3 and 2.1.0 have no wheels past 3.11)
+#   - rdkit instead of rdkit-pypi (rdkit-pypi stopped at Python 3.11)
+#   - supervisor dropped (container process manager, not needed locally)
+
+fastapi>=0.104.1
+uvicorn[standard]>=0.24.0
+pydantic>=2.5.0
+slowapi>=0.1.9
+
+numpy>=1.26
+torch>=2.2
+
+rdkit>=2023.3.1
+
+requests>=2.31.0

@@ -1,0 +1,32 @@
+{
+  "drug": {
+    "name": "Fluoxetine",
+    "drug_class": "SSRI",
+    "molecularTargets": [
+      {
+        "target": "SERT",
+        "action": "inhibitor",
+        "potency": 0.85,
+        "ki_nM": 1.0
+      }
+    ],
+    "pharmacokinetics": {
+      "halfLife_hours": 72.0,
+      "tmax_hours": 6.0,
+      "bioavailability": 0.72,
+      "vd_L_kg": 20.0
+    }
+  },
+  "disease": {
+    "name": "Major Depression",
+    "serotonin_deficit": -0.40,
+    "dopamine_deficit": -0.30,
+    "noradrenaline_deficit": -0.25,
+    "acetylcholine_deficit": 0.0
+  },
+  "dose_mg": 20.0,
+  "typical_dose_mg": 20.0,
+  "neurons": 100000,
+  "duration_hours": 168,
+  "sampling_interval_hours": 24
+}
